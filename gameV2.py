@@ -17,6 +17,7 @@ for i in range(0, times):
 	number_2 = randrange(10)
 	operator = choice(operators)
 	# Se imprime la cuenta
+	# verificamos que en el operador / no tenga un 0 como divisor
 	if operator == "/":
 		while number_2 == 0:
 			number_2 = randrange(10)
@@ -35,6 +36,7 @@ for i in range(0, times):
 		Res = int ((number_1) / (number_2))
 	# Le pedimos al usuario el resultado
 	result = int(input("resultado: "))#MOD
+	# Sumamos la cantidad de aciertos o erroes
 	if result == Res:#MOD
 		print("CORRECTO")
 		cant_Correct = cant_Correct + 1
@@ -48,4 +50,5 @@ end_time = datetime.now()
 total_time = end_time - init_time
 # Mostramos ese tiempo en segundos.
 print(f"\n Tardaste {total_time.seconds} segundos.")
+# Mostramos la cantidad de aciertos y errores
 print(f"\ Correctos {cant_Correct} Incorrectos {cant_Incorrect}") #MOD
